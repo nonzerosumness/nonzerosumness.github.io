@@ -38,15 +38,17 @@ section {
 }
 </style>
 <article>
-<section><p>The page you’re looking for can’t be&nbsp;found.</p><!-- <p><a href='https://nonzerosumness.com' title='Home'>Home</a></p> --></section>
+<section><p>The page you’re looking for can’t be&nbsp;found.</p><p><a href='https://nonzerosumness.com' title='Go Home'>Home</a></p></section>
 </article>
-
 <script>
-	window.onload = () => {
-		currentURL = window.location.href;
-		lowerCaseURL = currentURL.toLowerCase();
-		if (currentURL != lowerCaseURL) {
-			location.replace(lowerCaseURL);
-		}
-	};
+window.onload = () => {
+	document.querySelector('article').style.display = 'none'
+	currentURL = window.location.href;
+	lowerCaseURL = currentURL.toLowerCase();
+	if (currentURL != lowerCaseURL) {
+		location.replace(lowerCaseURL);
+	} else {
+		document.querySelector('article').style.display = 'block'
+	}
+};
 </script>

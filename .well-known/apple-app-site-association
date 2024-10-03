@@ -2,16 +2,17 @@
     "applinks": {
         "details": [{
             "appIDs": ["SJLK5L7PS9.com.nonzerosumness.X"],
-            "components": [
-            	{
-                	"/": "/note/open/*",
-                	"comment": "Matches any URL whose path starts with /note/open/*"
-            	},
-            	{
-                	"/": "/%3C3/open/*",
-                	"comment": "Matches any URL whose path starts with /<3/open/*"
-            	}
-            ]
+            "components": [{
+                "/": "/note/open/*",
+                "comment": "Matches any URL whose path starts with /note/open/*"
+            }]
+        },
+        {
+            "appIDs": ["SJLK5L7PS9.com.nonzerosumness.HeartWidget"],
+            "components": [{
+                "/": "/%3C3/open/*",
+                "comment": "Matches any URL whose path starts with /<3/open/*"
+            }]
         }]
     }
 }

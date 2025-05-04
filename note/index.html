@@ -40,16 +40,16 @@ a {
 const isMobileSafari = navigator.userAgent.match(/safari/i) && navigator.vendor.match(/apple/i) && navigator.maxTouchPoints > 0;
 const button = document.querySelector('a');
 button.style.opacity = 0;
-if (isMobileSafari) {
-	document.addEventListener('readystatechange', function() {
-		if (document.readyState === 'interactive') {
-			setTimeout(function() {
-				button.style.top = `calc(${window.innerHeight - button.clientHeight}px - 10vh)`;
-				button.style.opacity = 1.0;
-			}, 600);
-		}
-	});
-} else {
+// if (isMobileSafari) {
+// 	document.addEventListener('readystatechange', function() {
+// 		if (document.readyState === 'interactive') {
+// 			setTimeout(function() {
+// 				button.style.top = `calc(${window.innerHeight - button.clientHeight}px - 10vh)`;
+// 				button.style.opacity = 1.0;
+// 			}, 600);
+// 		}
+// 	});
+// } else {
 	window.location.replace('https://apps.apple.com/nl/app/note/id1602765272?ppid=8855d978-fb1e-4d20-b179-36038337c91d'); 
-}
+// }
 </script>

@@ -1,8 +1,13 @@
 <!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
 <title>Note</title>
+<meta name='robots' content='noindex, nofollow, noarchive'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<!-- <meta http-equiv='refresh' content='0; url="https://apps.apple.com/app/id1602765272"'> -->
+<!-- 
 <meta name='apple-itunes-app' content='app-id=1602765272'>
+ -->
 <link rel='icon' type='image/png' href='/note/favicon-16x16.png' sizes='16x16'>
 <link rel='icon' type='image/png' href='/note/favicon-32x32.png' sizes='32x32'>
 <link rel='icon' type='image/png' href='/note/favicon-48x48.png' sizes='48x48'>
@@ -10,46 +15,43 @@
 <link rel='icon' type='image/png' href='/note/favicon-192x192.png' sizes='192x192'>
 <link rel='icon' type='image/png' href='/note/favicon-512x512.png' sizes='512x512'>
 <style>
-html {
-	background-color: white
+body {
+  background-color: black;
+  color: white;
+  image-rendering: optimizeQuality;
+  margin: 0 auto;
 }
-@media (prefers-color-scheme: dark) {
-	html {
-		background-color: black
-	}
+main {
+  margin: 20px auto;
 }
-a {
-	background: url('/note/AppStore.svg') no-repeat;
-	background-size: contain;
-	color: transparent;
-	height: 55px;
-	left: 0;
-	margin: 0 auto;
-	position: absolute;
-	right: 0;
-	text-align: center;
-	text-indent: -9999px;
-	top: calc(100vh - 55px - 20vh);
-	-webkit-user-select: none;
-	user-select: none;
-	width: 164px
+.iPhone {
+  background: url('iPhone.webp') no-repeat;
+  background-size: 293px 599px;
+  display: block;
+  height: 599px;
+  margin: 0 auto;
+  width: 293px;
+}
+@media only screen and (orientation: portrait) and (min-width: 438px),
+only screen and (orientation: landscape) and (min-width: 768px) {
+  html, body {
+    height: 100%;
+  }
+  body {
+    display: grid;
+    place-items: center center;
+  }
+  main {
+  	margin: 0 auto;
+  }
 }
 </style>
-<a href='https://apps.apple.com/nl/app/note/id1602765272?ppid=8855d978-fb1e-4d20-b179-36038337c91d' title='Download on the App Store'>Download on the App Store</a>
-<script>
-const isMobileSafari = navigator.userAgent.match(/safari/i) && navigator.vendor.match(/apple/i) && navigator.maxTouchPoints > 0;
-const button = document.querySelector('a');
-button.style.opacity = 0;
-// if (isMobileSafari) {
-// 	document.addEventListener('readystatechange', function() {
-// 		if (document.readyState === 'interactive') {
-// 			setTimeout(function() {
-// 				button.style.top = `calc(${window.innerHeight - button.clientHeight}px - 10vh)`;
-// 				button.style.opacity = 1.0;
-// 			}, 600);
-// 		}
-// 	});
-// } else {
-	window.location.replace('https://apps.apple.com/nl/app/note/id1602765272?ppid=8855d978-fb1e-4d20-b179-36038337c91d'); 
-// }
-</script>
+</head>
+<body>
+  <main>
+  	<a href='https://apps.apple.com/nl/app/note/id1602765272?ppid=8855d978-fb1e-4d20-b179-36038337c91d' title='Download Note on the App Store'>
+  	  <div class='iPhone' alt='An iPhone showing our app Note.'></div>
+  	</a>
+  </main>
+</body>
+</html>

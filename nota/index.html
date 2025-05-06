@@ -63,7 +63,7 @@ only screen and (orientation: landscape) and (min-width: 768px) {
     if (!isMobileSafari) {
       button.addEventListener('click', function(event) {
         event.preventDefault();
-        setTimeout(() => window.location.replace(this.getAttribute('href')), 1000)
+        setTimeout(() => window.location.assign(this.getAttribute('href')), 1000)
       })
     }
   </script>

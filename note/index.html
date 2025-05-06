@@ -22,10 +22,10 @@ html {
 }
 body {
   image-rendering: optimizeQuality;
-  margin: 0 auto;
+  margin: 0 auto
 }
 main {
-  margin: 20px auto;
+  margin: 20px auto
 }
 .iPhone {
   background: url('/note/iPhone.webp') no-repeat;
@@ -33,19 +33,19 @@ main {
   display: block;
   height: 599px;
   margin: 0 auto;
-  width: 293px;
+  width: 293px
 }
 @media only screen and (orientation: portrait) and (min-width: 438px),
 only screen and (orientation: landscape) and (min-width: 768px) {
   html, body {
-    height: 100%;
+    height: 100%
   }
   body {
     display: grid;
-    place-items: center center;
+    place-items: center center
   }
   main {
-  	margin: 0 auto;
+  	margin: 0 auto
   }
 }
 </style>
@@ -56,5 +56,11 @@ only screen and (orientation: landscape) and (min-width: 768px) {
   	  <div class='iPhone' alt='An iPhone showing our app Note.'></div>
   	</a>
   </main>
+  <script>
+    document.querySelector('a').addEventListener('click', function(event) {
+      event.preventDefault();
+      window.location.replace(this.getAttribute('href'));
+    });
+  </script>
 </body>
 </html>

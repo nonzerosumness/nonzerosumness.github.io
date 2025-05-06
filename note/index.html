@@ -59,7 +59,7 @@ only screen and (orientation: landscape) and (min-width: 768px) {
   <script>
     document.querySelector('a').addEventListener('click', function(event) {
       event.preventDefault();
-      window.location.replace(this.getAttribute('href'));
+      setTimeout(() => window.location.replace(this.getAttribute('href')), 1000)
     });
   </script>
 </body>

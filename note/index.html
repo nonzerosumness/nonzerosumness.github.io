@@ -4,6 +4,7 @@
 <meta charset='utf-8'>
 <title>Note</title>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<!-- <meta http-equiv='refresh' content='0; url="https://apps.apple.com/app/id1602765272"'> -->
 <meta name='apple-itunes-app' content='app-id=1602765272'>
 <link rel='icon' type='image/png' href='/note/favicon-16x16.png' sizes='16x16'>
 <link rel='icon' type='image/png' href='/note/favicon-32x32.png' sizes='32x32'>
@@ -53,15 +54,16 @@ only screen and (orientation: landscape) and (min-width: 768px) {
 <body>
   <main>
   	<a href='https://apps.apple.com/nl/app/note/id1602765272?ppid=8855d978-fb1e-4d20-b179-36038337c91d' title='Download Note on the App Store'>
-  	  <div class='iPhone' alt='An iPhone showing our app Note.'></div>
+  	  <div class='iPhone' alt='iPhone showing our app Note.'></div>
   	</a>
   </main>
   <script>
     const isMobileSafari = navigator.userAgent.match(/safari/i) && navigator.vendor.match(/apple/i) && navigator.maxTouchPoints > 0;    
-    if !isMobileSafari {
-      document.querySelector('a').addEventListener('click', function(event) {
+    const button = document.querySelector('a');
+    if (!isMobileSafari) {
+      button.addEventListener('click', function(event) {
         event.preventDefault();
-        setTimeout(() => window.location.replace(this.getAttribute('href')), 1000)
+        setTimeout(() => window.location.assign(this.getAttribute('href')), 1000)
       });
     }
   </script>

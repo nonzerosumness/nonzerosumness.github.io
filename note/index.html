@@ -57,10 +57,13 @@ only screen and (orientation: landscape) and (min-width: 768px) {
   	</a>
   </main>
   <script>
-    document.querySelector('a').addEventListener('click', function(event) {
-      event.preventDefault();
-      setTimeout(() => window.location.replace(this.getAttribute('href')), 1000)
-    });
+    const isMobileSafari = navigator.userAgent.match(/safari/i) && navigator.vendor.match(/apple/i) && navigator.maxTouchPoints > 0;    
+    if !isMobileSafari {
+      document.querySelector('a').addEventListener('click', function(event) {
+        event.preventDefault();
+        setTimeout(() => window.location.replace(this.getAttribute('href')), 1000)
+      });
+    }
   </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset='utf-8'>
 <title>Nota</title>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<!-- <meta http-equiv='refresh' content='0; url="https://apps.apple.com/it/app/id1602765272"'> -->
+<!-- <meta http-equiv='refresh' content='0; url="https://apps.apple.com/it/app/nota/id1602765272"'> -->
 <meta name='apple-itunes-app' content='app-id=1602765272'>
 <link rel='icon' type='image/png' href='/note/favicon-16x16.png' sizes='16x16'>
 <link rel='icon' type='image/png' href='/note/favicon-32x32.png' sizes='32x32'>
@@ -29,15 +29,14 @@ main {
   margin: 20px auto
 }
 .iPhone {
-  background: url('/nota/iPhone.webp') no-repeat;
+  background: url('/nota/iPhoneNota.webp') no-repeat;
   background-size: 293px 599px;
   display: block;
   height: 599px;
   margin: 0 auto;
   width: 293px
 }
-@media only screen and (orientation: portrait) and (min-width: 438px),
-only screen and (orientation: landscape) and (min-width: 768px) {
+@media only screen and (orientation: portrait) and (min-width: 438px), only screen and (orientation: landscape) and (min-width: 768px) {
   html, body {
     height: 100%
   }
@@ -46,25 +45,24 @@ only screen and (orientation: landscape) and (min-width: 768px) {
     place-items: center center
   }
   main {
-  	margin: 0 auto
+    margin: 0 auto
   }
 }
 </style>
 </head>
 <body>
   <main>
-  	<a href='https://apps.apple.com/it/app/nota/id1602765272' title='Download Nota on the App Store'>
-  	  <div class='iPhone' alt='iPhone showing our app Nota.'></div>
-  	</a>
+    <a href='https://apps.apple.com/it/app/nota/id1602765272' title='Download Nota on the App Store'>
+      <div class='iPhone' alt='iPhone showing our app Nota.'></div>
+    </a>
   </main>
   <script>
     const isMobileSafari = navigator.userAgent.match(/safari/i) && navigator.vendor.match(/apple/i) && navigator.maxTouchPoints > 0;    
-    const button = document.querySelector('a');
     if (!isMobileSafari) {
-      button.addEventListener('click', function(event) {
+      document.querySelector('a').addEventListener('click', function(event) {
         event.preventDefault();
         setTimeout(() => window.location.assign(this.getAttribute('href')), 1000)
-      })
+      });
     }
   </script>
 </body>

@@ -29,15 +29,14 @@ main {
   margin: 20px auto
 }
 .iPhone {
-  background: url('/note/iPhone.webp') no-repeat;
+  background: url('/note/iPhoneNote.webp') no-repeat;
   background-size: 293px 599px;
   display: block;
   height: 599px;
   margin: 0 auto;
   width: 293px
 }
-@media only screen and (orientation: portrait) and (min-width: 438px),
-only screen and (orientation: landscape) and (min-width: 768px) {
+@media only screen and (orientation: portrait) and (min-width: 438px), only screen and (orientation: landscape) and (min-width: 768px) {
   html, body {
     height: 100%
   }
@@ -46,22 +45,21 @@ only screen and (orientation: landscape) and (min-width: 768px) {
     place-items: center center
   }
   main {
-  	margin: 0 auto
+    margin: 0 auto
   }
 }
 </style>
 </head>
 <body>
   <main>
-  	<a href='https://apps.apple.com/nl/app/note/id1602765272?ppid=8855d978-fb1e-4d20-b179-36038337c91d' title='Download Note on the App Store'>
-  	  <div class='iPhone' alt='iPhone showing our app Note.'></div>
-  	</a>
+    <a href='https://apps.apple.com/nl/app/note/id1602765272?ppid=8855d978-fb1e-4d20-b179-36038337c91d' title='Download Note on the App Store'>
+      <div class='iPhone' alt='iPhone showing our app Note.'></div>
+    </a>
   </main>
   <script>
     const isMobileSafari = navigator.userAgent.match(/safari/i) && navigator.vendor.match(/apple/i) && navigator.maxTouchPoints > 0;    
-    const button = document.querySelector('a');
     if (!isMobileSafari) {
-      button.addEventListener('click', function(event) {
+      document.querySelector('a').addEventListener('click', function(event) {
         event.preventDefault();
         setTimeout(() => window.location.assign(this.getAttribute('href')), 1000)
       });

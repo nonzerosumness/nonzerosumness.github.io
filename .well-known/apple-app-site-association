@@ -10,7 +10,7 @@
         {
             "appIDs": ["SJLK5L7PS9.com.nonzerosumness.HeartWidget"],
             "components": [{
-                "/": "/heart-widget/open/*",
+                "/": "/heart-widget/open/app",
                 "comment": "Matches any URL whose path starts with /heart-widget/open/*"
             }]
         }]
